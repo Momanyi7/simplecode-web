@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Site</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+	
+		<style type ="text/css">
+	
+				/* Reset default margin and padding */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: Arial, sans-serif;
+				line-height: 1.6;
+			}
+
+			header {
+				background-color: #333;
+				color: #fff;
+				padding: 1rem;
+				text-align: center;
+			}
+
+			header h1 {
+				margin-bottom: 0.5rem;
+			}
+
+			nav ul {
+				list-style-type: none;
+			}
+
+			nav ul li {
+				display: inline;
+				margin-right: 1rem;
+			}
+
+			nav ul li a {
+				color: #fff;
+				text-decoration: none;
+			}
+
+			main {
+				padding: 2rem;
+			}
+
+			section {
+				margin-bottom: 2rem;
+			}
+
+			label {
+				display: block;
+				margin-bottom: 0.5rem;
+			}
+
+			textarea {
+				width: 100%;
+				padding: 0.5rem;
+				margin-bottom: 1rem;
+			}
+
+			button {
+				padding: 0.5rem 1rem;
+				background-color: #333;
+				color: #fff;
+				border: none;
+				cursor: pointer;
+			}
+
+			footer {
+				background-color: #333;
+				color: #fff;
+				text-align: center;
+				padding: 1rem;
+			}
+			
+		</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Flashcard Site</h1>
+    <!-- Navigation links (e.g., Home, About, Login/Register) -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Login/Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Flashcard creation form -->
+    <section id="flashcard-form">
+        <h2>Create Flashcard</h2>
+        <form action="#" method="POST">
+            <label for="front">Front:</label>
+            <textarea id="front" name="front" rows="4" cols="50"></textarea>
+            <label for="back">Back:</label>
+            <textarea id="back" name="back" rows="4" cols="50"></textarea>
+            <label for="mimage">Mimage (Mnemonic Discussion):</label>
+            <textarea id="mimage" name="mimage" rows="4" cols="50"></textarea>
+            <button type="submit">Create Flashcard</button>
+        </form>
+    </section>
+
+    <!-- Flashcard display -->
+    <section id="flashcard-display">
+        <h2>Flashcards</h2>
+        <!-- Display flashcards dynamically using JavaScript -->
+        <!-- Placeholder for now -->
+        <div class="flashcard">
+            <div class="front">Front of the flashcard</div>
+            <div class="back">Back of the flashcard</div>
+            <div class="mimage">Mnemonic suggestions go here</div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Flashcard Site. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

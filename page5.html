@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	
+    <title>Introduction to C# Programming Language.</title>
+	
+
+	
+	<style type ="text/css">
+	
+	 /*=========== CSS Reset and global styles remain the same=========== */
+
+        /* Media queries for responsive design */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 16px; /* Adjust font size for smaller screens */
+            }
+
+            #wrapper {
+                width: 100%; /* Full width for smaller screens */
+            }
+
+            nav ul {
+                width: 100%; /* Full width for smaller screens */
+            }
+
+            .nav-item {
+                display: block; /* Display each item vertically on smaller screens */
+                margin: 2% 0;
+                text-align: center; /* Center-align navigation items */
+            }
+
+            .feature-img,
+            .feature-text,
+            .main-figure,
+            #sidebar,
+            .side-figure {
+                width: 100%; /* Full width for smaller screens */
+                float: none; /* Remove float for easier stacking */
+                margin: 0; /* Reset margin for full width */
+                padding: 2%; /* Add some padding for spacing */
+            }
+        }
+
+
+	
+	
+	/*=================== CSS Reset===========================*/
+	
+			/* http://meyerweb.com/eric/tools/css/reset/ 
+		   v2.0 | 20110126
+		   License: none (public domain)
+		*/
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        /* End CSS Reset */
+
+	/*===============================END CSS RESET=====================================*/
+	
+	
+	/*======================color schema====================*/
+	/*
+		*** Primary color:
+
+   shade 0 = #AA3939 light-grey= rgb(170, 57, 57) = rgba(170, 57, 57,1) = rgb0(0.667,0.224,0.224)
+   shade 1 = #FFAAAA = rgb(255,170,170) = rgba(255,170,170,1) = rgb0(1,0.667,0.667)
+   shade 2 = #D46A6A = rgb(212,106,106) = rgba(212,106,106,1) = rgb0(0.831,0.416,0.416)
+   shade 3 = #801515 = rgb(128, 21, 21) = rgba(128, 21, 21,1) = rgb0(0.502,0.082,0.082)
+   shade 4 = #550000 = rgb( 85,  0,  0) = rgba( 85,  0,  0,1) = rgb0(0
+	*/
+		body{
+			background-color:#ccccff ;
+		}
+		
+		#wrapper {
+			width:80.56640625%; /*825/1024*/
+			margin:0 auto;
+			background-color:black;
+			}
+		nav	{
+			
+			margin: 0 auto;
+			background-color:#550000 ;
+			padding: 1% 0;
+			}
+		nav ul{
+			width:85.575757575758%; /*706/825*/
+			margin:0 auto;
+		
+		}	
+		.nav-item{
+			display: inline-block;
+			margin-left: 2%;
+			background-color: green;
+		}
+		
+		li.nav-item a:link {
+			color: orange;
+			}
+		li.nav-item a:visited {
+			color: orange;
+			}
+		li.nav-item a:hover {
+			color: white;
+			background-color:skyblue;
+			}
+		li.nav-item a:active {
+			red;
+			}
+		header{
+			background-color:  #801515;
+			padding:3%;
+		}
+		feature{
+			max-width:100%;
+		}
+		#feature {
+			width:81.325757575758%; /*706/825*/
+			margin:3% auto 4% auto;
+			padding:1.5% 2.25% 3.% 2.25%;
+			background-color: #b1a7a5;
+			overflow:hidden;
+			}
+		
+		.feature-img {
+				width:40%;
+				float:left;
+				}
+		.feature-text{
+				float:left;
+				width:58%;
+				margin-left:2%;
+				font-family: 'Oswald', sans-serif;
+				font-size:1.4em;
+				line-height:125%;
+				letter-spacing:.07m;
+				}
+				
+		#main-content{
+				width:59.39393939393939%; /*523/825*/
+				float:left;
+				padding 2%;
+				margin:2%;
+				}
+		.main-figure{
+				width:32.50478011472275%; /*170/523*/
+				margin-right:9.56022944550669%; /*50/523*/
+				float: right;
+				padding:2%;
+			}
+		#sidebar{
+				width:32.60606060606061%; /*302/825*/
+				float:left;
+				marigin:2%;
+				background-color:black;
+				}
+		.side-figure{
+				width:88.0794701986755%; /*266/302*/
+				margin:0 auto;
+				float: right;
+				padding:bottom:2%;
+			
+				}
+		figure img{
+			max-width:100%;
+		}
+		.figure img{
+			background-color:red;
+		}	
+		footer{
+			clear:left;
+			padding:2%;
+			text-align: center; 
+			color:white;
+		}
+		footer p{
+			margin:0;
+		}
+		
+		/*============================type styles==============================*/
+		
+		#feature h2{
+			margin-bottom:2%;
+		}
+		p{
+			margin:2.5% 0;
+		}
+		article>p{
+			line-height:133%;
+			color: #D1E3DD;
+			padding:2%;
+		}
+			/*
+			font-family: 'Libre Franklin', sans-serif;
+			font-family: 'Oswald', sans-serif;
+			font-family: 'PT Sans Narrow', sans-serif;
+			font-family: 'Roboto', sans-serif;
+			font-family: 'Roboto Condensed', sans-serif;
+			*/
+		body{
+		font-family: 'Libre Franklin', sans-serif;
+		}
+		
+		h1, h2, h3, h4{
+			font-family: 'Oswald', sans-serif;
+			color: Blue;
+			
+		}
+		
+		h1{
+			font-size:2.5em;
+			font-weight:bold;
+			color:white;
+		}
+		h2{
+			font-size:1.4em;
+			font-weight:bold;
+		}
+		
+		figcaption{
+			font-family: 'Roboto', sans-serif;
+			margin:4%;
+			color:#40e0d0;
+		}
+		sidebar figcaption{
+			margin-bottom: 8%;
+			padding:1%
+		}
+		
+		/*============================blockquote============================*/
+		blockquote{
+			font-size:1.2em;
+			font-family:Oswald;
+			line-height:1.2em;
+			margin:2% 0 2% 4%;
+			background-color:skyblue;
+			padding:3%;
+			border-left: 10px solid black;
+			color: light_blue;
+		}
+		blockquote:before{
+			vertical-align:-.35em;
+			line-height:0;
+			font-size:4em;
+			content:"\201C";
+			}
+		ul{
+		list-style-type:square;
+		margin:4%;
+		font-weight:bold;
+		color:brown;	
+	}
+	
+	
+	</style>
+	
+	<!--[if lt IE 9]>
+	<script src="
+	https: //cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body>
+	<div id="wrapper">
+	
+			<header>
+				<h1> C# Programming Language</h1>
+			
+<nav>
+			<ul>
+				<li class="nav-item"><a href="page1.html">Page  1</a></li>
+				<li class="nav-item"><a href="page2.html">Page  2</a></li>
+				<li class="nav-item"><a href="page3.html">Page  3</a></li>
+				<li class="nav-item"><a href="page4.html">Page  4</a></li>
+				<li class="nav-item"><a href="page5.html">Page  5</a></li>
+			</ul>
+		</nav>
+
+
+		
+		<div id= "feature">
+					<h2>C#</h2>
+					
+				<img src="see.jpeg" class="feature-img"/>
+				
+				<p class="feature-text"> C# (pronounced "See Sharp") is a versatile and powerful programming 
+				language that has firmly established itself as a cornerstone of modern software development.
+				  </p>
+		</div>
+			
+		<div id="main-content">
+			<article>
+				<h2>Object-Oriented Nature of C#. </h2>
+				
+				
+				
+					<p>C# (pronounced "See Sharp") is a contemporary, object-oriented, and type-safe
+					programming language. It empowers developers to create secure and robust applications 
+					within the .NET framework. C# has its origins in the C language family,
+					making it instantly recognizable to programmers familiar with C, C++, Java, and JavaScript. </p>
+					<a href= "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/">C# (See Sharp)</a>
+					
+						<blockquote>
+							C# is a modern, object-oriented, and type-safe programming language.
+						</blockquote>
+						
+				<figure class="main-figure"> 
+					<img src="see1.jpeg"/>
+					<figcaption>
+						<p>C# features.</p>
+					</figcaption>
+				</figure>
+						
+				<p>C# is inherently object-oriented and component-oriented. It offers language 
+				constructs that directly support these concepts, making it a natural choice for
+				creating and utilizing software components. C# has evolved over time to adapt to
+				new workloads and emerging software design practices. At its core, 
+				it remains an object-oriented language where types and their behavior are defined.</p>
+				
+							<ul>
+									<li>C# is ideal for creating software components with its built-in language
+									constructs. </li>	
+							
+									<li>With its roots in the C family of languages, C# offers a familiar syntax for developers 
+									acquainted with languages like C, C++, Java, and JavaScript.  </li>	
+								</ul>
+								
+				<p>C# provides several features that contribute to the development of robust and reliable
+				applications. Garbage collection automatically reclaims memory occupied by unreachable objects.
+				Nullable types prevent variables from referencing unallocated objects.</p>
+			</article>
+			
+			<article>
+				<h2>Robust Application Development </h2>
+							<blockquote>
+							This tour provides an overview of the major components of the language in C# 11 and earlier.
+							</blockquote>
+							
+				<p>
+						Exception handling offers a structured approach to error detection and
+						 recovery. Lambda expressions support functional programming, while LINQ syntax 
+						 simplifies data manipulation. Asynchronous operations are also supported, making 
+						 C# suitable for building distributed systems.</p>
+						 
+				<p>C# boasts a unified type system, where all types, including primitives like int
+				and double, inherit from a single root object type. This common foundation allows
+				for consistent operations on values of any type. Additionally, C# supports both 
+				user-defined reference types and value types,
+				allowing dynamic allocation of objects and inline storage of lightweight structures. </p>
+				
+				
+			</article>
+			
+		</div>
+		<div id="sidebar">
+			<article>
+				<h2>Emphasis on Versioning</h2>
+				<figure class="side-figure"> 
+					<img src="see2.jpeg"/>
+					<figcaption>
+						<p>C# History</p>
+					</figcaption>
+				</figure>
+				
+				<p>C# places a strong emphasis on versioning to ensure the compatibility 
+				of programs and libraries as they evolve over time. Design aspects influenced
+				by versioning considerations include the separate virtual and override modifiers, rules for method 
+				overload resolution, and support for explicit interface member declarations.</p>
+				
+				<p>The language also includes support for generic methods and types,
+				enhancing type safety and performance.
+				Iterators enable custom behaviors for collection classes.</p>
+				
+							<blockquote>
+							C# emphasizes versioning to ensure programs and libraries can evolve over time
+						</blockquote>
+				<p>C# places a strong emphasis on versioning to ensure the compatibility of programs and 
+				libraries as they evolve over time. Design aspects influenced by versioning considerations
+				include the separate virtual and override modifiers, rules
+				for method overload resolution, and support for explicit interface member declarations.</p>
+			</article>
+		</div>
+
+	<footer>
+		<p><small>&copy; Coding For Android. </small></p>
+	</footer>
+</div>
+		
+</body>
+</html>

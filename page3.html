@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	
+    <title>Programming in Java</title>
+	
+
+	
+	<style type ="text/css">
+	
+	 /*================== CSS Reset and global styles remain the same================ */
+
+        /* Media queries for responsive design */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 16px; /* Adjust font size for smaller screens */
+            }
+
+            #wrapper {
+                width: 100%; /* Full width for smaller screens */
+            }
+
+            nav ul {
+                width: 100%; /* Full width for smaller screens */
+            }
+
+            .nav-item {
+                display: block; /* Display each item vertically on smaller screens */
+                margin: 2% 0;
+                text-align: center; /* Center-align navigation items */
+            }
+
+            .feature-img,
+            .feature-text,
+            .main-figure,
+            #sidebar,
+            .side-figure {
+                width: 100%; /* Full width for smaller screens */
+                float: none; /* Remove float for easier stacking */
+                margin: 0; /* Reset margin for full width */
+                padding: 2%; /* Add some padding for spacing */
+            }
+        }
+
+   
+
+	
+	
+	/*=================== CSS Reset===========================*/
+	
+			/* http://meyerweb.com/eric/tools/css/reset/ 
+		   v2.0 | 20110126
+		   License: none (public domain)
+		*/
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        /* End CSS Reset */
+
+	/*===============================END CSS RESET=====================================*/
+	
+	
+	/*======================color schema====================*/
+	/*
+		lightest grey- #e5e5e5
+		red -#ea3057
+		black - #191919
+		dark grey - #5b5553
+		medium grey - #b1a7a5
+	*/
+		body{
+			background-color:#ffefd5;
+		}
+		
+		#wrapper {
+			width:80.56640625%; /*825/1024*/
+			margin:0 auto;
+			background-color:#55DDE0;
+			}
+		nav	{
+			
+			margin: 0 auto;
+			background-color:  #2F4858;
+			padding: 1% 0;
+			}
+		nav ul{
+			width:85.575757575758%; /*706/825*/
+			margin:0 auto;
+		
+		}	
+		.nav-item{
+			display: inline-block;
+			margin-left: 2%;
+			background-color: green;
+		}
+		
+		li.nav-item a:link {
+			color: orange;
+			}
+		li.nav-item a:visited {
+			color: orange;
+			}
+		li.nav-item a:hover {
+			color: white;
+			background-color:skyblue;
+			}
+		li.nav-item a:active {
+			red;
+			}
+		header{
+			background-color: #b1a7a5;
+			padding:3%;
+			text-align: right;
+		}
+		feature{
+			max-width:100%;
+		}
+		#feature {
+			width:81.325757575758%; /*706/825*/
+			margin:3% auto 4% auto;
+			padding:1.5% 2.25% 3.% 2.25%;
+			background-color: #F6AE2D;
+			overflow:hidden;
+			}
+		
+		.feature-img {
+				width:40%;
+				float:left;
+				}
+		.feature-text{
+				float:left;
+				width:58%;
+				margin-left:2%;
+				font-family: 'Oswald', sans-serif;
+				font-size:1.4em;
+				line-height:125%;
+				letter-spacing:.07m;
+				}
+				
+		#main-content{
+				width:59.39393939393939%; /*523/825*/
+				float:left;
+				padding 2%;
+				margin:2%;
+				}
+		.main-figure{
+				width:32.50478011472275%; /*170/523*/
+				margin-right:9.56022944550669%; /*50/523*/
+				float: right;
+				padding:2%;
+			}
+		#sidebar{
+				width:32.60606060606061%; /*302/825*/
+				float:left;
+				marigin:2%;
+				}
+		.side-figure{
+				width:88.0794701986755%; /*266/302*/
+				margin:0 auto;
+				float: right;
+				padding:bottom:2%;
+				}
+		figure img{
+			max-width:100%;
+		}
+		.figure img{
+			background-color:red;
+		}	
+		footer{
+			clear:left;
+			padding:2%;
+			text-align: center; 
+			}
+		
+
+		}
+		footer p{
+			margin:0;
+		}
+		
+		/*============================type styles==============================*/
+		
+		#feature h2{
+			margin-bottom:2%;
+		}
+		p{
+			margin:2.5% 0;
+		}
+		article>p{
+			line-height:133%;
+			color:A9B18F;
+		}
+			/*
+			font-family: 'Libre Franklin', sans-serif;
+			font-family: 'Oswald', sans-serif;
+			font-family: 'PT Sans Narrow', sans-serif;
+			font-family: 'Roboto', sans-serif;
+			font-family: 'Roboto Condensed', sans-serif;
+			*/
+		body{
+		font-family: 'Libre Franklin', sans-serif;
+		}
+		
+		h1, h2, h3, h4{
+			font-family: 'Oswald', sans-serif;
+			color:#cc0099;
+			
+		}
+		
+		h1{
+			font-size:2em;
+			font-weight:bold;
+		}
+		h2{
+			font-size:1.4em;
+			font-weight:bold;
+		}
+		
+		figcaption{
+			font-family: 'Roboto', sans-serif;
+			margin:4%;
+			color:red;
+		}
+		sidebar figcaption{
+			margin-bottom: 8%;
+		}
+		
+		/*============================blockquote============================*/
+		blockquote{
+			font-size:1.2em;
+			font-family:Oswald;
+			line-height:1.2em;
+			margin:2% 0 2% 4%;
+			background-color:#645986;
+			padding:3%;
+			border-left: 10px solid black;
+			color: light_blue;
+		}
+		blockquote:before{
+			vertical-align:-.35em;
+			line-height:0;
+			font-size:4em;
+			content:"\201C";
+			}
+		ul{
+		list-style-type:square;
+		margin:4%;
+		font-weight:bold;
+		color:#4A4E69;
+		
+	}
+	ol{
+		list-style-type:disc;
+		margin:6%;
+		
+	}
+	</style>
+	
+	<!--[if lt IE 9]>
+	<script src="
+	https: //cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body>
+	<div id="wrapper">
+	
+			<header>
+				<h1> Java Programming Language</h1>
+			</header>
+		
+			
+				
+	<nav>
+			<ul>
+				<li class="nav-item"><a href="page1.html">Page  1</a></li>
+				<li class="nav-item"><a href="page2.html">Page  2</a></li>
+				<li class="nav-item"><a href="page3.html">Page  3</a></li>
+				<li class="nav-item"><a href="page4.html">Page  4</a></li>
+				<li class="nav-item"><a href="page5.html">Page  5</a></li>
+			</ul>
+		</nav>
+
+		<div id= "feature">
+					<h2>Java for Android.</h2>
+				<img src="java1.jpeg" class="feature-img"/>
+				<p class="feature-text">Java is a widely-recognized, high-level, class-based, object-oriented programming
+				language known for its aim to minimize implementation dependencies</p>
+		</div>
+			
+		<div id="main-content">
+			<article>
+				<h2>A look at Java Code Language. </h2>
+				<a href ="https://aws.amazon.com/what-is/java/#:~:text=Java%20is%20a%20multi%2Dplatform,applications%20and%20server%2Dside%20technologies."> Java </a>
+				
+				
+					<p>It serves as a versatile programming tool, allowing developers to write code
+					once and run it across diverse platforms without the need for recompilation, a concept
+					known as "write once, run anywhere" (WORA). Java applications are typically compiled 
+					into bytecode, enabling them to operate on any Java virtual machine (JVM), regardless
+					of the underlying hardware architecture. While Java shares similarities with C and C++
+					in terms of syntax, it offers fewer low-level features. </p>
+					
+						<blockquote>
+							"Java is a high-level, class-based, object-oriented programming language 
+							that is designed to have as few implementation dependencies as possible. 
+							
+						</blockquote>
+					<figure class="main-figure"> 
+					<img src="java.jpeg"/>
+					<figcaption>
+						<p>Java features.</p>
+					</figcaption>
+				</figure>	
+				<p>Since its initial release, Java has garnered significant popularity, consistently 
+				ranking as one of the most popular programming languages. In 2022, it stood as the
+				third most favored programming language on GitHub and held the fourth position on 
+				the TIOBE index as of October 2023. </p>
+					
+							<ul>
+									<li>Java is a high-level, class-based, object-oriented programming language </li>	
+				
+									<li>It aims for minimal implementation dependencies and follows the
+									"write once, run anywhere" (WORA) principle </li>	
+									
+								</ul>
+				<p>Java was originally conceived by James Gosling at Sun Microsystems and was 
+				introduced in May 1995 as a fundamental component of Sun's Java platform. Sun 
+				initially released the original and reference implementation of Java compilers,
+				virtual machines, and class libraries under proprietary licenses. By May 2007, 
+				in alignment with the Java Community Process specifications, Sun had re-licensed
+				most of its Java technologies under the GPL-2.0-only license.</p>
+			</article>
+			
+			<article>
+				<h2>History. </h2>
+							<blockquote>
+							Java, born as Oak in the mid-1990s, transformed into a platform-independent
+							powerhouse with 'write once, run anywhere' capabilities, and its open-sourcing 
+							in 2007 through OpenJDK marked a pivotal moment in its rich history of evolution
+							and innovation
+							</blockquote>	
+				<p>Java, a powerful and versatile programming language, has a rich history that dates
+				back to the mid-1990s. It was originally developed by James Gosling and his team at 
+				Sun Microsystems, with the project initially known as "Oak." The primary goal behind 
+				Oak was to create a programming language suitable for embedded systems. However, as 
+				the internet revolution began to gain momentum, Sun recognized the need for a
+				platform-independent language that could run on various devices, leading to the 
+				transformation of Oak into Java. In May 1995, Java made its official debut as a 
+				core component of Sun's Java platform, and its unique feature of "write once,
+				run anywhere" quickly captured the attention of developers and businesses alike.</p>
+				
+				<p>One of the pivotal moments in Java's history occurred in 2007 when 
+				Sun Microsystems decided to release most of its Java technologies under
+				the GPL-2.0-only license. This move, in compliance with the Java Community 
+				Process, led to the open-sourcing of Java through the OpenJDK (Java Development Kit) project. 
+				Consequently, Java became more accessible to developers and fostered a vibrant community
+				around it. </p>
+
+		</div>
+		<div id="sidebar">
+			<article>
+				<h2>Java: A Versatile Powerhouse</h2>
+				
+				<figure class="side-figure"> 
+					<img src="java2.jpeg"/>
+					<figcaption>
+						<p>Java</p>
+					</figcaption>
+				</figure>
+				
+				<p>Java, a versatile programming language with a storied history, has been
+				a driving force in the world of software development for decades. Its journey
+				began in the mid-1990s when James Gosling and his team at Sun Microsystems
+				conceived it as "Oak," initially targeting embedded systems. However, as the 
+				internet era took off, Java transformed into a platform-independent marvel
+				known for its "write once, run anywhere" (WORA) capability. </p>
+						
+					
+							<blockquote>
+							Java's 'write once, run anywhere' philosophy and its transition to 
+							open-source through OpenJDK have cemented its place in the annals 
+							of programming history, making it a language that empowers developers
+							across diverse platforms and ecosystems
+						</blockquote>
+				<p>Java's history is marked by consistent evolution and adaptation. Notably,
+				the decision in 2007 to release most of its technologies under an open-source
+				license, GPL-2.0-only, democratized access to the language. Java 8 introduced 
+				lambdas and the Stream API, revolutionizing coding practices. </p>
+			</article>
+		</div>
+
+	<footer>
+		<p><small>&copy; Coding For Android.</small></p>
+	</footer>
+</div>
+		
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	
+    <title>C++ Programming language.</title>
+	
+ 
+	<style type ="text/css">
+	
+	 /* ==============CSS Reset and global styles remain the same===================== */
+
+        /* Media queries for responsive design */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 16px; /* Adjust font size for smaller screens */
+            }
+
+            #wrapper {
+                width: 100%; /* Full width for smaller screens */
+            }
+
+            nav ul {
+                width: 100%; /* Full width for smaller screens */
+            }
+
+            .nav-item {
+                display: block; /* Display each item vertically on smaller screens */
+                margin: 2% 0;
+                text-align: center; /* Center-align navigation items */
+            }
+
+            .feature-img,
+            .feature-text,
+            .main-figure,
+            #sidebar,
+            .side-figure {
+                width: 100%; /* Full width for smaller screens */
+                float: none; /* Remove float for easier stacking */
+                margin: 0; /* Reset margin for full width */
+                padding: 2%; /* Add some padding for spacing */
+            }
+        }
+
+
+	
+	
+	/*=================== CSS Reset===========================*/
+	
+			/* http://meyerweb.com/eric/tools/css/reset/ 
+		   v2.0 | 20110126
+		   License: none (public domain)
+		*/
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        /* End CSS Reset */
+
+	/*===============================END CSS RESET=====================================*/
+	
+	
+	/*======================color schema====================*/
+	/*
+		lightest grey- #e5e5e5
+		red -#ea3057
+		black - #191919
+		dark grey - #5b5553
+		medium grey - #b1a7a5
+	*/
+		body{
+			background-color:#cc9966;
+		}
+		
+		#wrapper {
+			width:80.56640625%; /*825/1024*/
+			margin:0 auto;
+			background-color:#567714;
+			}
+		nav	{
+			
+			margin: 0 auto;
+			background-color:  #b1a7a5;
+			padding: 1% 0;
+			}
+		nav ul{
+			width:85.575757575758%; /*706/825*/
+			margin:0 auto;
+		
+		}	
+		.nav-item{
+			display: inline-block;
+			margin-left: 2%;
+			background-color: green;
+		}
+		
+		li.nav-item a:link {
+			color: orange;
+			}
+		li.nav-item a:visited {
+			color: orange;
+			}
+		li.nav-item a:hover {
+			color: white;
+			background-color:skyblue;
+			}
+		li.nav-item a:active {
+			red;
+			}
+		header{
+			background-color: #999966;
+			padding:3%;
+			text-align:center;
+		}
+		feature{
+			max-width:100%;
+		}
+		#feature {
+			width:81.325757575758%; /*706/825*/
+			margin:3% auto 4% auto;
+			padding:1.5% 2.25% 3.% 2.25%;
+			background-color: #6E7DAB;
+			overflow:hidden;
+			}
+		
+		.feature-img {
+				width:40%;
+				float:left;
+				}
+		.feature-text{
+				float:left;
+				width:58%;
+				margin-left:2%;
+				font-family: 'Oswald', sans-serif;
+				font-size:1.4em;
+				line-height:125%;
+				letter-spacing:.07m;
+				}
+				
+		#main-content{
+				width:59.39393939393939%; /*523/825*/
+				float:left;
+				padding 2%;
+				margin:2%;
+				}
+		.main-figure{
+				width:32.50478011472275%; /*170/523*/
+				margin-right:9.56022944550669%; /*50/523*/
+				float: right;
+				padding:2%;
+			}
+		#sidebar{
+				width:32.60606060606061%; /*302/825*/
+				float:left;
+				marigin:2%;
+				padding:2%;
+				
+			}
+		.side-figure{
+				width:88.0794701986755%; /*266/302*/
+				margin:0 auto;
+				float: right;
+				padding:bottom:2%;
+				}
+		figure img{
+			max-width:100%;
+		}
+		.figure img{
+			background-color:red;
+		}	
+		footer{
+			clear:left;
+			padding:2%;
+			text-align: center; 
+			color:#ff0066;
+    
+}
+
+		}
+		footer p{
+			margin:0;
+		}
+		
+		/*============================type styles==============================*/
+		
+		#feature h2{
+			margin-bottom:2%;
+		}
+		p{
+			margin:2.5% 0;
+		}
+		article>p{
+			line-height:140%;
+			color:#ffffff;
+			padding:1%;
+		}
+			/*
+			font-family: 'Libre Franklin', sans-serif;
+			font-family: 'Oswald', sans-serif;
+			font-family: 'PT Sans Narrow', sans-serif;
+			font-family: 'Roboto', sans-serif;
+			font-family: 'Roboto Condensed', sans-serif;
+			*/
+		body{
+		font-family: 'Libre Franklin', sans-serif;
+		}
+		
+		h1, h2, h3, h4{
+			font-family: 'Oswald', sans-serif;
+			color:#660033;
+		}
+		
+		h1{
+			font-size:2em;
+			font-weight:bold;
+			
+		}
+		h2{
+			font-size:1.4em;
+			font-weight:bold;
+		}
+		
+		figcaption{
+			font-family: 'Roboto', sans-serif;
+			margin:4%;
+			color: #000066;
+		}
+		sidebar figcaption{
+			margin-bottom: 8%;
+			padding:2%;
+		}
+		
+		/*============================blockquote============================*/
+		blockquote{
+			font-size:1.2em;
+			font-family:Oswald;
+			line-height:1.2em;
+			margin:2% 0 2% 4%;
+			background-color:#AA5585;
+			padding:3%;
+			border-left: 10px solid black;
+			color: light_blue;
+		}
+		blockquote:before{
+			vertical-align:-.35em;
+			line-height:0;
+			font-size:4em;
+			content:"\201C";
+			}
+		ul{
+		list-style-type:square;
+		margin:4%;
+		font-weight:bold;
+		color:#ffffaa;
+		
+	}
+	ol{
+		list-style-type:disc;
+		margin:6%;
+		
+	}
+	</style>
+	
+	<!--[if lt IE 9]>
+	<script src="
+	https: //cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body>
+	<div id="wrapper">
+	
+			<header>
+				<h1> C++ Programming language. </h1>
+			</header>
+			
+	<nav>
+			<ul>
+				<li class="nav-item"><a href="page1.html">Page  1</a></li>
+				<li class="nav-item"><a href="page2.html">Page  2</a></li>
+				<li class="nav-item"><a href="page3.html">Page  3</a></li>
+				<li class="nav-item"><a href="page4.html">Page  4</a></li>
+				<li class="nav-item"><a href="page5.html">Page  5</a></li>
+			</ul>
+		</nav>
+
+
+		
+		<div id= "feature">
+					<h2>C++</h2>
+				<img src="c1.jpeg" class="feature-img"/>
+				
+				<p class="feature-text">C++ boasts a wide array of compilers offered by various vendors, including the 
+				Free Software Foundation, LLVM, Microsoft, Intel, Embarcadero, Oracle, and IBM.</p>
+		</div>
+			
+		<div id="main-content">
+			<article>
+				<h2>C++ language. </h2>
+
+					<p>C++ is a versatile, high-level programming language conceived by Danish computer 
+					scientist Bjarne Stroustrup. Originally introduced in 1985 as an extension of the
+					C programming language, it has evolved significantly over the years. By 1997, C++ 
+					had incorporated object-oriented, generic, and functional programming features, 
+					alongside capabilities for low-level memory manipulation.</p>
+					
+						<blockquote>
+							C++ is a high-level, general-purpose programming language.
+							It was created by Danish computer scientist Bjarne Stroustrup in 1985
+						</blockquote>
+						
+				<p>C++ was purposefully crafted with an emphasis on system programming, resource-constrained
+				embedded software, and large-scale systems, prioritizing performance, efficiency, and adaptability.
+				Nevertheless, C++ has proven its value in numerous 
+				other domains, excelling in areas such as software infrastructure and resource-limited applications. </p>
+					
+				<figure class="main-figure"> 
+					<img src="c2.jpeg"/>
+					<figcaption>
+						<p>caption here</p>
+					</figcaption>
+				</figure>
+				
+							<ul>
+								<li>It has been widely employed in creating desktop applications, video games, 
+								servers (e.g., in e-commerce, web search, and databases), 
+								as well as performance-critical applications (like telephone switches and space probes). </li>	
+						
+							
+									<li>C++: A versatile, high-performance language born from C's roots and continually evolving 
+							to power systems, games, and applications, shaping the future of programming </li>	
+									
+								</ul>
+								
+				<p>Standardized by the International Organization for Standardization (ISO), the most
+				recent standard iteration was ratified in December 2020 as ISO/IEC 14882:2020, 
+				commonly referred to as C++20. The journey to standardization began in 1998 with ISO/IEC 14882:1998, 
+				which underwent subsequent amendments through the C++03, C++11, C++14, and C++17 standards. </p>
+			</article>
+			
+			
+			<article>
+				<h2>The Making of C++ </h2>
+				<p>C++ has a rich history that dates back to the late 1970s when Danish computer 
+				scientist Bjarne Stroustrup began developing it at Bell Labs. Stroustrup aimed to 
+				create a language that retained the efficiency and low-level capabilities of C while
+				adding high-level features for better program organization. This led to the birth of C++ 
+				in 1985, initially as an extension of the C programming language.
+				Its name, "C++," signifies an increment in the C language, symbolizing its evolutionary nature.</p>
+						
+				<p>Throughout the 1980s and 1990s, C++ gained popularity among programmers, 
+				especially in domains requiring system-level control and efficiency. In 1998, C++ achieved a significant
+				milestone when it was standardized as ISO/IEC 14882:1998, setting the foundation 
+				for its widespread adoption. </p>
+						
+				
+				<p>The latest chapter in C++'s history, C++20 (ISO/IEC 14882:2020), was ratified 
+				in December 2020, further expanding its standard library and capabilities. Today,
+				C++ continues to be a dominant force in the programming world, finding application in
+				various domains such as systems programming, game development, server-side applications, and more. </p>
+			</article>
+			
+		</div>
+		<div id="sidebar">
+			<article>
+				<h2>C++ in Brief. </h2>
+				
+				<figure class="side-figure"> 
+					<img src="c3.jpeg"/>
+					<figcaption>
+						<p>caption here</p>
+					</figcaption>
+				</figure>
+				
+				<p>C++ is a robust programming language that emerged from C in 1985, evolving
+				to combine low-level control with high-level features. With a history of standardization, 
+				C++ has seen notable iterations like C++03, C++11, C++14, and C++17, with C++20 being the 
+				latest version. </p>
+				
+				<p>C++ remains a driving force in the programming world, striking a balance between efficiency and modernity. 
+				Its wide adoption is evident in its application across industries, 
+				from server-side solutions for e-commerce and databases to real-time systems like space probes</p>
+						
+							<blockquote>
+							C++: Bridging the gap between control and creativity, evolving with
+							every standard to empower programmers across diverse domains
+						</blockquote>
+						
+				<p>Its evolution continues with the upcoming C++23 standard, promising even more 
+				innovations to empower developers and 
+				shape the future of software engineering.</p>
+			</article>
+		</div>
+
+	<footer>
+		<p><small>&copy; Coding For Android. </small></p>
+	</footer>
+</div>
+		
+</body>
+</html>
